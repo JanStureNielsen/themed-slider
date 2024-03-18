@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 
+import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 
@@ -11,29 +12,21 @@ import { MatSliderModule } from '@angular/material/slider';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [ CommonModule, FormsModule, MatRadioModule, MatSliderModule, NgFor ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    NgFor,
+
+    MatCardModule,
+    MatRadioModule,
+    MatSliderModule,
+    ],
 })
 export class AppComponent {
   paletteNames: string[] = ['primary', 'accent', 'warn'];
-  paletteSelected: string = 'primary';
+  paletteSelected: string = this.paletteNames[0];
 
-  useOtherTheme: boolean = true;
-  useOtherColor: boolean = true;
-
-  public palette() {
-      const palette = this.paletteSelected;
-
-      console.log('jsn: palette: ', palette);
-
-      return palette;
-  }
-
-  public theme() {
-      const theme = this.useOtherTheme ? 'use-light-theme' : '';
-
-      console.log('jsn: theme: ', theme);
-
-      return theme;
-  }
+  themeNames: string[] = ['theme-1', 'theme-2', 'theme-3'];
+  themeSelected: string = this.themeNames[0];
 
 }
