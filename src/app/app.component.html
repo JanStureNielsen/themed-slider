@@ -16,6 +16,6 @@
 
 <mat-slider
   [ngClass]="{'use-some-color': !useOtherColor, 'use-other-color': useOtherColor}"
->
+  [color]="palette()">
   <input matSliderThumb />
 </mat-slider>

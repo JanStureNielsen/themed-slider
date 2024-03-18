@@ -18,13 +18,17 @@ export class AppComponent {
   public palette() {
       const palette = this.useOtherColor ? "primary" : "accent";
 
-      console.log('jsn: palette:', palette);
+      console.log('jsn: palette: ', palette);
 
       return palette;
   }
 
   public theme() {
-      return this.useOtherTheme ? "use-light-theme" : "";
+      const theme = this.useOtherTheme ? "use-light-theme" : "";
+
+      console.log('jsn: theme: ', theme);
+
+      return theme;
   }
 
 }
