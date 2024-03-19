@@ -23,10 +23,10 @@ import { MatSliderModule } from '@angular/material/slider';
     ],
 })
 export class AppComponent {
-  paletteNames: string[] = ['primary', 'accent', 'warn'];
-  paletteSelected: string = this.paletteNames[0];
-
   themeNames: string[] = ['theme-1', 'theme-2', 'theme-3'];
   themeSelected: string = this.themeNames[0];
+
+  paletteNames: string[] = ['primary', 'accent', 'warn'];
+  paletteSelected: string = this.paletteNames[0];
 
 }

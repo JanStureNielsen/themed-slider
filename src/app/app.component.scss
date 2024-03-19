@@ -1,7 +1,4 @@
 @use '@angular/material' as mat;
-@import "../theme.scss";
-
-@include mat.core();
 
 mat-radio-group {
   display: flex;
@@ -17,16 +14,4 @@ mat-slider {
 .slider-demonstrations {
   display: flex;
   flex-direction: column;
-}
-
-.use-some-color {
-  --mdc-slider-handle-color: #{mat.get-color-from-palette($color-palette-state-0, default)};
-  --mdc-slider-active-track-color: #{mat.get-color-from-palette($color-palette-state-0, default)};
-  --mdc-slider-inactive-track-color: #{mat.get-color-from-palette($color-palette-state-0, default)};
-}
-
-.use-other-color {
-  --mdc-slider-handle-color: #{mat.get-color-from-palette($color-palette-state-1, default)};
-  --mdc-slider-active-track-color: #{mat.get-color-from-palette($color-palette-state-1, default)};
-  --mdc-slider-inactive-track-color: #{mat.get-color-from-palette($color-palette-state-1, default)};
 }

@@ -3,7 +3,7 @@
 @include mat.core();
 
 // Default theme
-$theme-1-def: mat.define-light-theme((
+$theme-0-def: mat.define-light-theme((
  color: (
    primary: mat.define-palette(mat.$indigo-palette),
    accent: mat.define-palette(mat.$yellow-palette),
@@ -15,15 +15,28 @@ $theme-1-def: mat.define-light-theme((
 ));
 
 // Apply default theme
-@include mat.core-theme($theme-1-def);
-@include mat.all-component-themes($theme-1-def);
+@include mat.core-theme($theme-0-def);
+@include mat.all-component-themes($theme-0-def);
+
+.theme-1 {
+  // Define a light theme
+  $theme-1-def: mat.define-light-theme((
+   color: (
+     primary: mat.define-palette(mat.$indigo-palette),
+     accent: mat.define-palette(mat.$pink-palette),
+   ),
+  ));
+
+  @include mat.core-color($theme-1-def);
+  @include mat.all-component-themes($theme-1-def);
+}
 
 .theme-2 {
+  // Define a light theme
   $theme-2-def: mat.define-light-theme((
    color: (
-     primary: mat.define-palette(mat.$deep-purple-palette),
-     accent: mat.define-palette(mat.$indigo-palette),
-     warn: mat.define-palette(mat.$blue-palette),
+     primary: mat.define-palette(mat.$green-palette),
+     accent: mat.define-palette(mat.$yellow-palette),
    ),
   ));
 
@@ -32,17 +45,14 @@ $theme-1-def: mat.define-light-theme((
 }
 
 .theme-3 {
+  // Define a light theme
   $theme-3-def: mat.define-light-theme((
    color: (
-     primary: mat.define-palette(mat.$teal-palette),
-     accent: mat.define-palette(mat.$green-palette),
-     warn: mat.define-palette(mat.$lime-palette),
+     primary: mat.define-palette(mat.$red-palette),
+     accent: mat.define-palette(mat.$purple-palette),
    ),
   ));
 
   @include mat.core-color($theme-3-def);
   @include mat.all-component-themes($theme-3-def);
 }
-
-$color-palette-state-0: mat.define-palette(mat.$yellow-palette);
-$color-palette-state-1: mat.define-palette(mat.$amber-palette);

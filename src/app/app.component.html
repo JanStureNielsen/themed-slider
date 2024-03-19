@@ -5,7 +5,7 @@
   </mat-card-header>
 
   <mat-card-content>
-    {{ themeSelected }}
+    '{{ themeSelected }}'
   </mat-card-content>
 
   <mat-card-actions>
@@ -46,8 +46,7 @@
 
   <mat-card-content class="slider-demonstrations">
     Default theme selection with color attribute
-    <mat-slider
-      [color]="paletteSelected">
+    <mat-slider [class]="themeSelected">
       <input matSliderThumb />
     </mat-slider>
 
@@ -55,16 +54,6 @@
     <mat-slider
       [class]="themeSelected"
       [color]="paletteSelected">
-      <input matSliderThumb />
-    </mat-slider>
-
-    Using class to select 'use-some-color'
-    <mat-slider class="use-some-color">
-      <input matSliderThumb />
-    </mat-slider>
-
-    Using class to select 'use-other-color'
-    <mat-slider class="use-other-color">
       <input matSliderThumb />
     </mat-slider>
 
