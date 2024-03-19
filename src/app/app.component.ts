@@ -23,10 +23,21 @@ import { MatSliderModule } from '@angular/material/slider';
     ],
 })
 export class AppComponent {
-  themeNames: string[] = ['theme-1', 'theme-2', 'theme-3'];
-  themeSelected: string = this.themeNames[0];
+  useOtherColor: boolean = true;
 
-  paletteNames: string[] = ['primary', 'accent', 'warn'];
-  paletteSelected: string = this.paletteNames[0];
+  private themeNames: string[] = ['theme-1', 'theme-2', 'theme-3'];
+  private themeIndex: number = 0;
+
+  useOtherTheme: string = this.themeNames[this.themeIndex];
+
+  theme() {
+    this.themeIndex++;
+
+    if (this.themeIndex == this.themeNames.length) {
+      this.themeIndex = 0;
+    }
+
+    return this.themeNames[this.themeIndex];
+  }
 
 }

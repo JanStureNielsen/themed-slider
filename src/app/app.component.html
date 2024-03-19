@@ -1,62 +1,8 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Theme Selection</mat-card-title>
-    <mat-card-subtitle>Select active theme</mat-card-subtitle>
-  </mat-card-header>
+<div>
+  <button (click)="useOtherTheme = theme()">Change theme</button>
+  User other theme: {{useOtherTheme}}
+</div>
 
-  <mat-card-content>
-    '{{ themeSelected }}'
-  </mat-card-content>
-
-  <mat-card-actions>
-    <mat-radio-group
-      [(ngModel)]="themeSelected">
-      <mat-radio-button *ngFor="let themeName of themeNames" [value]="themeName">
-        {{themeName}}
-      </mat-radio-button>
-    </mat-radio-group>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Palette selection</mat-card-title>
-    <mat-card-subtitle>Select active palette</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content>
-    <div>{{ paletteSelected }}</div>
-  </mat-card-content>
-
-  <mat-card-actions>
-    <mat-radio-group
-      [(ngModel)]="paletteSelected">
-      <mat-radio-button *ngFor="let paletteName of paletteNames" [value]="paletteName">
-        {{paletteName}}
-      </mat-radio-button>
-    </mat-radio-group>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Component Demonstrations</mat-card-title>
-    <mat-card-subtitle>Effects of theme and palette selections</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content class="slider-demonstrations">
-    Default theme selection with color attribute
-    <mat-slider [class]="themeSelected">
-      <input matSliderThumb />
-    </mat-slider>
-
-    Class selected theme with color attribute
-    <mat-slider
-      [class]="themeSelected"
-      [color]="paletteSelected">
-      <input matSliderThumb />
-    </mat-slider>
-
-  </mat-card-content>
-
-</mat-card>
+<mat-slider [class]="useOtherTheme">
+  <input matSliderThumb />
+</mat-slider>
