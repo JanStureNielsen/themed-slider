@@ -49,7 +49,7 @@ $theme-0-def: mat.define-light-theme((
   $theme-3-def: mat.define-light-theme((
    color: (
      primary: mat.define-palette(mat.$red-palette),
-     accent: mat.define-palette(mat.$purple-palette),
+     accent: mat.define-palette(mat.$cyan-palette),
    ),
   ));
 
