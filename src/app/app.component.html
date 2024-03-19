@@ -45,12 +45,12 @@
   </mat-card-header>
 
   <mat-card-content class="slider-demonstrations">
-    Default theme selection with color attribute
+    Select theme via class
     <mat-slider [class]="themeSelected">
       <input matSliderThumb />
     </mat-slider>
 
-    Class selected theme with color attribute
+    Select theme via class and palette via color
     <mat-slider
       [class]="themeSelected"
       [color]="paletteSelected"> <!-- v17.3 requires:  "strictTemplates": false -->
