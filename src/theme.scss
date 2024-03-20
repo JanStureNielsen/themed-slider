@@ -6,8 +6,8 @@
 $theme-0-def: mat.define-light-theme((
  color: (
    primary: mat.define-palette(mat.$indigo-palette),
-   accent: mat.define-palette(mat.$yellow-palette),
-   warn: mat.define-palette(mat.$pink-palette)
+   accent: mat.define-palette(mat.$cyan-palette),
+   warn: mat.define-palette(mat.$lime-palette)
  ),
   // Only include `typography` and `density` in the default dark theme.
   typography: mat.define-typography-config(),
@@ -22,7 +22,7 @@ $theme-0-def: mat.define-light-theme((
   // Define a light theme
   $theme-1-def: mat.define-light-theme((
    color: (
-     primary: mat.define-palette(mat.$indigo-palette),
+     primary: mat.define-palette(mat.$teal-palette),
      accent: mat.define-palette(mat.$pink-palette),
    ),
   ));
@@ -48,7 +48,7 @@ $theme-0-def: mat.define-light-theme((
   // Define a light theme
   $theme-3-def: mat.define-light-theme((
    color: (
-     primary: mat.define-palette(mat.$red-palette),
+     primary: mat.define-palette(mat.$purple-palette),
      accent: mat.define-palette(mat.$cyan-palette),
    ),
   ));

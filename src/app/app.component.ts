@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { ThemePalette } from '@angular/material/core';
 
@@ -15,7 +14,6 @@ import { ThemePalette } from '@angular/material/core';
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule,
     NgFor,
 
     MatCardModule,
@@ -29,5 +27,13 @@ export class AppComponent {
 
   paletteNames: ThemePalette[] = ['primary', 'accent', 'warn'];
   paletteSelected: ThemePalette = this.paletteNames[0];
+
+  onChangeTheme(event: MatRadioChange) {
+    this.themeSelected = event.value;
+  }
+
+  onChangePalette(event: MatRadioChange) {
+    this.paletteSelected = event.value;
+  }
 
 }
