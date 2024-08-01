@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Theme Selection</mat-card-title>
-    <mat-card-subtitle>Select active theme</mat-card-subtitle>
+    <mat-card-title>Application Theme Selection</mat-card-title>
+    <mat-card-subtitle>Select active application theme</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
@@ -10,7 +10,8 @@
 
   <mat-card-actions>
     <mat-radio-group [value]="themeSelected" (change)="onChangeTheme($event)">
-      <mat-radio-button *ngFor="let themeName of themeNames" [value]="themeName">
+      <mat-radio-button *ngFor="let themeName of themeNames" [value]="themeName"
+                        [color]="colorSelected">
         {{themeName}}
       </mat-radio-button>
     </mat-radio-group>
@@ -19,17 +20,18 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Palette selection</mat-card-title>
-    <mat-card-subtitle>Select active palette</mat-card-subtitle>
+    <mat-card-title>Color selection</mat-card-title>
+    <mat-card-subtitle>Select active color</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content>
-    <div>{{ paletteSelected }}</div>
+    <div>{{ colorSelected }}</div>
   </mat-card-content>
 
   <mat-card-actions>
-    <mat-radio-group [value]="paletteSelected" (change)="onChangePalette($event)">
-      <mat-radio-button *ngFor="let paletteName of paletteNames" [value]="paletteName">
+    <mat-radio-group [value]="colorSelected" (change)="onChangeColor($event)">
+      <mat-radio-button *ngFor="let paletteName of colorName" [value]="paletteName"
+                        [color]="colorSelected">
         {{paletteName}}
       </mat-radio-button>
     </mat-radio-group>
@@ -44,20 +46,21 @@
 
   <mat-card-content class="slider-demonstrations">
     Select theme via class property
-    <mat-slider [class]="themeSelected">
+    <mat-slider discrete
+      [class]="themeSelected">
       <input matSliderThumb />
     </mat-slider>
 
     Select palette via color property
-    <mat-slider
-      [color]="paletteSelected">
+    <mat-slider discrete
+      [color]="colorSelected">
       <input matSliderThumb />
     </mat-slider>
 
     Select theme via class property and palette via color property
-    <mat-slider
+    <mat-slider discrete
       [class]="themeSelected"
-      [color]="paletteSelected">
+      [color]="colorSelected">
       <input matSliderThumb />
     </mat-slider>
 

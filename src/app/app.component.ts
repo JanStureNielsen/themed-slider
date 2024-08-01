@@ -25,15 +25,15 @@ export class AppComponent {
   themeNames: string[] = ['theme-1', 'theme-2', 'theme-3'];
   themeSelected: string = this.themeNames[0];
 
-  paletteNames: ThemePalette[] = ['primary', 'accent', 'warn'];
-  paletteSelected: ThemePalette = this.paletteNames[0];
+  colorName: ThemePalette[] = ['primary', 'accent', 'warn'];
+  colorSelected: ThemePalette = this.colorName[0];
 
   onChangeTheme(event: MatRadioChange) {
     this.themeSelected = event.value;
   }
 
-  onChangePalette(event: MatRadioChange) {
-    this.paletteSelected = event.value;
+  onChangeColor(event: MatRadioChange) {
+    this.colorSelected = event.value;
   }
 
 }
