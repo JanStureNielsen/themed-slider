@@ -6,6 +6,9 @@
 
   <mat-card-content>
     '{{ themeSelected }}'
+      <button mat-button color="primary">PRIMARY</button>
+      <button mat-button color="accent">ACCENT</button>
+      <button mat-button color="warning">WARNING</button>
   </mat-card-content>
 
   <mat-card-actions>
@@ -20,49 +23,26 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Color selection</mat-card-title>
-    <mat-card-subtitle>Select active color</mat-card-subtitle>
+    <mat-card-title>Theme-independent Order Component</mat-card-title>
+    <mat-card-subtitle>These components should either be blue for BUY or red for SELL regardless of the application theme & color settings.</mat-card-subtitle>
   </mat-card-header>
 
-  <mat-card-content>
-    <div>{{ colorSelected }}</div>
-  </mat-card-content>
+  <mat-card-content class="order-component">
+      <mat-button-toggle-group name="buySell" aria-label="Buy or Sell" class="buy-sell-selector">
+          <mat-button-toggle value="blue">BUY</mat-button-toggle>
+          <mat-button-toggle value="red">SELL</mat-button-toggle>
+      </mat-button-toggle-group>
 
-  <mat-card-actions>
-    <mat-radio-group [value]="colorSelected" (change)="onChangeColor($event)">
-      <mat-radio-button *ngFor="let paletteName of colorName" [value]="paletteName"
-                        [color]="colorSelected">
-        {{paletteName}}
-      </mat-radio-button>
-    </mat-radio-group>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Theme-independent Component</mat-card-title>
-    <mat-card-subtitle>These components should either be blue or red regardless of the application theme & color settings.</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content class="slider-demonstrations">
-    Select theme via class property
-    <mat-slider discrete
-      [class]="themeSelected">
-      <input matSliderThumb />
+      Order Units
+    <mat-slider discrete>
+      <input matSliderThumb #units/>
     </mat-slider>
 
-    Select palette via color property
-    <mat-slider discrete
-      [color]="colorSelected">
-      <input matSliderThumb />
+    Order Price
+    <mat-slider discrete>
+      <input matSliderThumb #price/>
     </mat-slider>
 
-    Select theme via class property and palette via color property
-    <mat-slider discrete
-      [class]="themeSelected"
-      [color]="colorSelected">
-      <input matSliderThumb />
-    </mat-slider>
 
   </mat-card-content>
 

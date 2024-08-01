@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
@@ -15,7 +17,8 @@ import { ThemePalette } from '@angular/material/core';
   imports: [
     CommonModule,
     NgFor,
-
+    MatButtonModule,
+    MatButtonToggleModule,
     MatCardModule,
     MatRadioModule,
     MatSliderModule,

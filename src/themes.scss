@@ -2,6 +2,20 @@
 
 @include mat.core();
 
+$theme: mat.define-theme((
+        color: (
+                theme-type: dark,
+                primary: mat.$violet-palette,
+        ),
+        typography: (
+                brand-family: 'Comic Sans',
+                bold-weight: 900
+        ),
+        density: (
+                scale: -1
+        )
+));
+
 // Default theme
 $theme-0-def: mat.m2-define-light-theme((
  color: (
