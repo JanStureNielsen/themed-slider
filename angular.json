@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/slider-example",
+            "outputPath": "dist/buy-sell-example",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/themes.scss",
+              "src/theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
